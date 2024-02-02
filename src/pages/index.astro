@@ -4,14 +4,17 @@ import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 import Title from '../components/Title.astro';
 import Images from '../components/Images.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<Header/>
 		<Title />
+		<SectionContainer id="catalogo">
 		<Images/>
-
+	</SectionContainer>
 
 	</main>
 </Layout>
