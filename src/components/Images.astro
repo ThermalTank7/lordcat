@@ -1,0 +1,38 @@
+
+
+<h1 class="flex justify-center mt-[60px]">Preview</h1>
+
+<section class="m-[40px] md:m-[50px] lg:m-[150px] lg:mt-[50px] mt-[50px] border rounded-xl bg-slate-600 border-slate-600 p-5">
+    <img src="../../public/catalogo/1.png" alt="">
+    <img src="../../public/catalogo/2.png" alt="">
+    <img src="../../public/catalogo/6.png" alt="">
+    <img src="../../public/catalogo/4.png" alt="">
+    <img src="../../public/catalogo/5.png" alt="">
+</section>
+
+<style>
+
+section{
+    display: flex;
+    width: 80%;
+    height: 550px;
+}
+
+section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;    
+}
+
+section img:hover{
+    cursor: crosshair;
+    width: 200px;
+    opacity: 1;
+    filter: contrast(120%);
+
+}
+
+
+</style>
