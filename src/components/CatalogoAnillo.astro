@@ -1,33 +1,62 @@
-<div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-8 p-10"> 
+---
+import Anillos from "../pages/Anillos.astro";
 
+const Anillo1 = [
+  {
+    title: "Anillo Romano",
+    tipo: "Acero inoxidable",
+    tallas: "Tallas disponibles: 7, 8, 9, 10 ,11 y 12",
+    precio: "24.000 cop",
+  },
+  
+]
+const Anillo2 = [
+  {
+    title: "Anillo D. romano",
+    tipo: "Acero inoxidable",
+    tallas: "Tallas disponibles: 7, 8, 9, 10 ,11 y 12.",
+    precio: "25.000 cop",
+  },
+  
+]
+
+---
+
+<div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-8 p-10"> 
+{Anillo1.map(({title, tipo, tallas, precio}) =>(
 <div class=" max-w-xs bg-black border border-gray-200 rounded-lg shadow">
         <img class="p-8 rounded-t-lg" src="/Anillos/1.png" alt="" />
     <div class="px-5 pb-5">
-            <h5 class="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Anillo romano - Acero inoxidable</h5>
-            <p class="py-3">Tallas disponibles: 7, 8, 9, 10 ,11 y 12.</p>
-       
+            <h5 class="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{title} - {tipo}</h5>
+            <p class="py-3">{tallas}</p>
         <div class="flex items-center justify-between">
-            <span class="text-3xl font-bold text-gray-900 dark:text-white">24.000 cop</span>
+            <span class="text-3xl font-bold text-gray-900 dark:text-white">{precio}</span>
             <a href="https://wa.me/p/5835387506530156/573044816918" target="_blank" rel="noopener" 
             class="text-orange-300 bg-black hover:bg-orange-300 hover:text-black border border-orange-300 focus:ring-4 focus:outline-none rounded-lg text-sm font-bold px-5 py-2.5 text-center ">Comprar</a>
             
         </div>
     </div>
 </div>
+))}
+
+{Anillo2.map(({title, tipo, tallas, precio}) =>(
+
 <div class=" max-w-xs bg-black border border-gray-200 rounded-lg shadow">
         <img class="p-8 rounded-t-lg" src="/Anillos/2.png" alt="" />
     <div class="px-5 pb-5">
-            <h5 class="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Anillo D. romano - Acero inoxidable</h5>
-            <p class="py-3">Tallas disponibles: 7, 8, 9, 10 ,11 y 12.</p>
+            <h5 class="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{title} - {tipo}</h5>
+            <p class="py-3">{tallas}</p>
        
         <div class="flex items-center justify-between">
-            <span class="text-3xl font-bold text-gray-900 dark:text-white">25.000 cop</span>
+            <span class="text-3xl font-bold text-gray-900 dark:text-white">{precio}</span>
             <a href="https://www.whatsapp.com/catalog/573044816918/?app_absent=0" target="_blank" rel="noopener" 
             class="text-orange-300 bg-black hover:bg-orange-300 hover:text-black border border-orange-300 focus:ring-4 focus:outline-none rounded-lg text-sm font-bold px-5 py-2.5 text-center ">Comprar</a>
             
         </div>
     </div>
 </div>
+))}
+
 <div class=" max-w-xs bg-black border border-gray-200 rounded-lg shadow">
         <img class="p-8 rounded-t-lg" src="/Anillos/3.png" alt="" />
     <div class="px-5 pb-5">
@@ -55,5 +84,4 @@
         </div>
     </div>
 </div>
-
 </div>
